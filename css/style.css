@@ -1270,7 +1270,8 @@ table { border-collapse: collapse; width: 100%; }
 /* ─── FOOTER ─────────────────────────────────  */
 .site-footer {
   border-top: 1px solid var(--color-border);
-  padding-block: var(--space-8);
+  padding-top: clamp(48px, 6vw, 80px);
+  padding-bottom: var(--space-8);
   background: var(--color-surface-card);
 }
 .footer-inner {
