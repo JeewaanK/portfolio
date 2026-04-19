@@ -1508,3 +1508,10 @@ table { border-collapse: collapse; width: 100%; }
     gap: var(--space-8) !important;
   }
 }
+
+/* Lighter gap for report sub-sections (no border, just space) */
+.report-body .section-gap {
+  height: var(--space-8);
+  border-bottom: none;
+  margin-bottom: 0;
+}
