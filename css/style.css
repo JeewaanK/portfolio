@@ -1488,13 +1488,7 @@ table { border-collapse: collapse; width: 100%; }
   }
 }
 
-/* Investment approach 2-col text → single col on mobile */
-@media (max-width: 640px) {
-  .approach-2col {
-    grid-template-columns: 1fr !important;
-    gap: var(--space-4) !important;
-  }
-}
+/* .approach-text — single full-width reading column, no responsive override needed */
 
 /* Fixed-ratio content grids (1fr 360px) → single col on tablet/mobile */
 @media (max-width: 900px) {
