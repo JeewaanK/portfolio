@@ -465,11 +465,9 @@ table { border-collapse: collapse; width: 100%; }
   padding-block: clamp(var(--space-8), 4vw, var(--space-14));
 }
 
-/* Inter-section divider — thin rule with vertical gap above and below */
+/* Inter-section whitespace — pure space, no border (Option C) */
 .section-gap {
-  height: clamp(var(--space-8), 5vw, var(--space-12));
-  border-bottom: 1px solid var(--color-border);
-  margin-bottom: clamp(var(--space-8), 5vw, var(--space-12));
+  height: clamp(var(--space-12), 6vw, var(--space-20));
 }
 /* .section--alt removed — unified cream bg */
 /* .section--dark removed */
@@ -1506,9 +1504,7 @@ table { border-collapse: collapse; width: 100%; }
   }
 }
 
-/* Lighter gap for report sub-sections (no border, just space) */
+/* Lighter gap for report sub-sections */
 .report-body .section-gap {
-  height: var(--space-8);
-  border-bottom: none;
-  margin-bottom: 0;
+  height: var(--space-6);
 }
