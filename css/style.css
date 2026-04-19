@@ -471,11 +471,8 @@ table { border-collapse: collapse; width: 100%; }
   border-bottom: 1px solid var(--color-border);
   margin-bottom: clamp(var(--space-8), 5vw, var(--space-12));
 }
-.section--alt { background: var(--color-surface); }
-.section--dark {
-  background: var(--color-surface-dark);
-  color: var(--color-text-inverse);
-}
+/* .section--alt removed — unified cream bg */
+/* .section--dark removed */
 .section--bordered {
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
