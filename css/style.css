@@ -1363,3 +1363,133 @@ table { border-collapse: collapse; width: 100%; }
   .criteria-grid { grid-template-columns: 1fr; }
   .criteria-item { border-right: none; }
 }
+
+/* ─── RESPONSIVE FIXES ───────────────────────
+   Comprehensive breakpoints for mobile/tablet
+   ─────────────────────────────────────────── */
+
+/* ── Tablet (≤900px) ── */
+@media (max-width: 900px) {
+  /* About hero: stack photo above text */
+  .about-hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
+  }
+  .about-hero-inner img {
+    max-width: 180px !important;
+    margin-inline: auto;
+  }
+
+  /* Credentials: 2-col at tablet */
+  .creds-4col {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Skills row: 2-col at tablet */
+  .skills-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .skill-col:nth-child(2n) { border-right: none; }
+  .skill-col:nth-child(n+3) { border-top: 1px solid var(--color-border); }
+  .skill-col:last-child { border-bottom: none; }
+  .skill-col:nth-last-child(-n+2) { border-bottom: none; }
+
+  /* Research card: stack at tablet */
+  .research-card {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+  .card-right {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-5);
+  }
+  .card-metrics-row { flex-direction: row; flex-wrap: wrap; gap: var(--space-4); }
+  .card-metric-val { font-size: var(--text-lg); }
+}
+
+/* ── Mobile (≤640px) ── */
+@media (max-width: 640px) {
+  /* Hero stats: 3 per row max, tighter gap */
+  .hero-stats {
+    gap: var(--space-4) !important;
+    row-gap: var(--space-5) !important;
+  }
+  .stat-value { font-size: var(--text-lg); }
+
+  /* Philosophy grid: single column */
+  .philosophy-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
+  }
+
+  /* Credentials 4-col → single col */
+  .creds-4col {
+    grid-template-columns: 1fr !important;
+  }
+  .creds-4col > div {
+    border-radius: 0 !important;
+    border-bottom: none !important;
+  }
+  .creds-4col > div:first-child { border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important; }
+  .creds-4col > div:last-child  { border-radius: 0 0 var(--radius-lg) var(--radius-lg) !important; border-bottom: 1px solid var(--color-border) !important; }
+
+  /* Skills: single column */
+  .skills-row { grid-template-columns: 1fr; }
+  .skill-col { border-right: none !important; border-top: 1px solid var(--color-border) !important; }
+  .skill-col:first-child { border-top: none !important; }
+
+  /* Report layout: single col */
+  .report-layout { grid-template-columns: 1fr !important; }
+  .report-sidebar { position: static; order: -1; }
+
+  /* Scenario cards: stack */
+  .scenario-row { grid-template-columns: 1fr !important; }
+
+  /* Contact grid: single col */
+  .contact-grid { grid-template-columns: 1fr !important; }
+
+  /* Section header: stack link below title */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ── Small mobile (≤480px) ── */
+@media (max-width: 480px) {
+  /* Nav: tighten logo sub text */
+  .logo-sub-caps { display: none; }
+
+  /* Hero: tighter padding */
+  .hero { padding-top: var(--space-10); padding-bottom: var(--space-8); }
+
+  /* Page hero sections */
+  .report-hero-section { padding-block: var(--space-6) !important; }
+
+  /* Tables: allow horizontal scroll */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* Research card footer: stack */
+  .card-footer-row { flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+
+  /* Buttons: full width on smallest screens */
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+}
+
+/* Home credentials 2×2 grid responsive */
+@media (max-width: 640px) {
+  .creds-home-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Investment approach 2-col text → single col on mobile */
+@media (max-width: 640px) {
+  .approach-2col {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-4) !important;
+  }
+}
