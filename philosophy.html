@@ -39,11 +39,32 @@
 
     <div style="display:grid;grid-template-columns:1fr 360px;gap:clamp(var(--space-10),5vw,var(--space-16));align-items:start;">
       <div>
-        <p class="philosophy-body">In both equity reports, the market was pricing something specific. The question in each case was whether that number was right, and whether the data supported a different one.</p>
-        <p class="philosophy-body" style="margin-top:var(--space-5);">On NuScale, a reverse DCF extracted the market-implied pipeline conversion probability: 45.2%. That is a precise, testable number. Stage-gate close rates from comparable infrastructure projects put the correct estimate at 65%. The 20-point gap, applied to the 72-module TVA/ENTRA1 pipeline, generates $741M in incremental probability-weighted value — $2.48 per share, and the primary driver of the $14.19 price target. The conviction came from the specificity: this was not a qualitative view about nuclear energy, it was a calculated disagreement with one number the market was implying.</p>
-        <p class="philosophy-body" style="margin-top:var(--space-5);">On ULTA, Placer.ai store traffic data showed foot traffic up 3.8% year over year in Q2 FY25, while specialty retail fell 2.1% and department stores fell 8.4%. That divergence was observable in primary data before it appeared in same-store sales. The saturation narrative the market was pricing had already been contradicted. The question was how far consensus estimates would have to move once the data caught up — and the margin recovery path gave a second independent reason to be above Street on EPS.</p>
-        <p class="philosophy-body" style="margin-top:var(--space-5);">On HPQ, the same logic extended into credit. The market-implied spread at OAS 77bps did not reflect the net leverage trajectory: 1.46× declining to approximately 0.99× by FY27. The opportunity was not mispriced fundamentals — the carry is fair — it was upgrade optionality that was not reflected in current positioning.</p>
-        <p class="philosophy-body" style="margin-top:var(--space-5);">Neither report relied solely on data terminals. On ULTA, I visited the store twice and conducted consumer interviews to understand the shopping behavior behind the traffic numbers — whether the foot traffic Placer.ai was showing reflected genuine purchase intent or casual browsing. Talking to customers gave the quantitative signal a qualitative layer that made the thesis harder to dismiss. On NuScale, the technology risk was real and needed to be understood, not assumed away. I interviewed a Nuclear Engineering PhD student at UW–Madison to work through the reactor design, the specific failure modes of small modular reactors, and the realistic conditions under which the TVA pipeline would or would not convert. The goal in both cases was the same: get close enough to the underlying reality that the model reflects something true, not just something plausible.</p>
+        <!-- Framing -->
+        <p class="philosophy-body" style="margin-bottom:var(--space-8);">In each report, the market was pricing something specific. The question was whether that number was right — and whether the data supported a different one.</p>
+
+        <!-- Per-report entries -->
+        <div style="display:flex;flex-direction:column;gap:var(--space-8);">
+
+          <!-- SMR -->
+          <div style="padding-left:var(--space-5);border-left:2px solid var(--color-accent);">
+            <div style="font-size:var(--text-xs);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-2);">SMR — NuScale Power</div>
+            <p class="philosophy-body">A reverse DCF extracted the market-implied pipeline conversion probability: 45.2%. Stage-gate close rates from comparable infrastructure projects put the correct estimate at 65%. The 20-point gap, applied to the 72-module TVA/ENTRA1 pipeline, generates $2.48/sh of incremental value the market is not pricing. The conviction came from the specificity: this was not a qualitative view about nuclear energy — it was a calculated disagreement with one number.</p>
+          </div>
+
+          <!-- ULTA -->
+          <div style="padding-left:var(--space-5);border-left:2px solid var(--color-accent);">
+            <div style="font-size:var(--text-xs);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-2);">ULTA — Ulta Beauty</div>
+            <p class="philosophy-body">Placer.ai foot traffic showed ULTA gaining share (+3.8% YoY) while specialty retail fell 2.1% — a leading indicator visible months before it appeared in same-store sales. The saturation narrative the market was pricing had already been contradicted. The question was how far consensus would have to move once the data caught up. A second independent path — margin recovery +140bps vs. Street — reinforced the same conclusion.</p>
+          </div>
+
+          <!-- HPQ -->
+          <div style="padding-left:var(--space-5);border-left:2px solid var(--color-accent);">
+            <div style="font-size:var(--text-xs);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-2);">HPQ — HP Inc. Credit</div>
+            <p class="philosophy-body">The market-implied OAS of 77bps did not reflect net leverage declining from 1.46× to ~0.99× by FY27. The opportunity was not mispriced fundamentals — it was upgrade optionality not reflected in current positioning. The same logic, extended into credit.</p>
+          </div>
+
+        </div>
+
         <div style="margin-top:var(--space-8);">
           <a href="research.html" class="btn btn-dark">View the Research</a>
         </div>
@@ -68,6 +89,13 @@
             <div style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.7;">State explicitly what would have to be true for the thesis to be wrong. If there is no clear answer, the thesis is not specific enough.</div>
           </div>
         </div>
+
+        <!-- Primary research callout -->
+        <div style="margin-top:var(--space-6);padding:var(--space-6);background:var(--color-surface-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);">
+          <div style="font-size:var(--text-xs);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:var(--space-4);">Primary Research</div>
+          <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.75;margin:0;">On ULTA, I visited the store twice and conducted consumer interviews — verifying whether the Placer.ai foot traffic reflected genuine purchase intent or casual browsing. On NuScale, I interviewed a Nuclear Engineering PhD student at UW–Madison to stress-test the reactor design, failure modes, and pipeline conversion assumptions. In both cases: get close enough to the underlying reality that the model reflects something true, not just something plausible.</p>
+        </div>
+
       </div>
     </div>
   </div>
