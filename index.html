@@ -74,23 +74,23 @@
       </div>
 
       <div class="hero-stats">
-        <div class="hero-stat fade-up">
+        <div class="hero-stat">
           <div class="stat-value">3</div>
           <div class="stat-label">Published Reports</div>
         </div>
-        <div class="hero-stat fade-up d1">
+        <div class="hero-stat">
           <div class="stat-value">2</div>
           <div class="stat-label">Asset Classes</div>
         </div>
-        <div class="hero-stat fade-up d2">
+        <div class="hero-stat">
           <div class="stat-value green">CFA I</div>
           <div class="stat-label">Certified</div>
         </div>
-        <div class="hero-stat fade-up d3">
+        <div class="hero-stat">
           <div class="stat-value">$20M+</div>
           <div class="stat-label">Live Portfolio (Program)</div>
         </div>
-        <div class="hero-stat fade-up d4">
+        <div class="hero-stat">
           <div class="stat-value">3.75</div>
           <div class="stat-label">Undergraduate GPA</div>
         </div>
@@ -100,9 +100,9 @@
 </section>
 
 <!-- RESEARCH -->
-<section class="section section--alt section--bordered" style="padding-block:clamp(var(--space-10),5vw,var(--space-16));">
+<section class="section section--alt section--bordered">
   <div class="container">
-    <div class="section-header fade-up">
+    <div class="section-header">
       <div class="section-header-left">
         <p class="section-eyebrow">Published Work</p>
         <h2 class="section-title">Research Coverage</h2>
@@ -113,7 +113,7 @@
       </a>
     </div>
 
-    <div class="research-grid fade-up">
+    <div class="research-grid">
       <!-- SMR -->
       <a href="pages/smr.html" class="research-card">
         <div class="card-left">
@@ -192,7 +192,7 @@
 <!-- PHILOSOPHY PREVIEW -->
 <section class="section">
   <div class="container container--default">
-    <div class="section-header fade-up">
+    <div class="section-header">
       <div class="section-header-left">
         <p class="section-eyebrow">Framework</p>
         <h2 class="section-title">Investment Philosophy</h2>
@@ -204,38 +204,37 @@
     </div>
 
     <div class="philosophy-grid">
-      <div class="fade-up">
-        <p class="philosophy-body">
-          In each report, the starting question is the same: <strong>what specific number is the market implying, and what does the data actually say?</strong>
-        </p>
-        <p class="philosophy-body" style="margin-top:var(--space-5);">
-          On NuScale, a reverse DCF extracted the market-implied pipeline conversion probability. Stage-gate data put the right number 20 points higher. On ULTA, foot traffic data showed share gains before they appeared in same-store sales. The pattern in both cases was the same: observable data ahead of a consensus model that had not updated yet.
-        </p>
-        <div style="margin-top:var(--space-8);">
+      <div>
+        <p class="philosophy-body">In each report, the starting question is the same: what specific number is the market implying, and what does the data actually say?</p>
+        <p class="philosophy-body" style="margin-top:var(--space-5);">On NuScale, a reverse DCF extracted the market-implied pipeline conversion probability: 45.2%. Stage-gate close rates put the correct estimate at 65%. On ULTA, Placer.ai foot traffic data showed ULTA gaining share while specialty retail declined — months before it appeared in same-store sales. In both cases, observable data was ahead of a consensus model that had not updated yet.</p>
+        <div style="margin-top:var(--space-6);">
           <a href="philosophy.html" class="btn btn-outline">Read the Full Framework →</a>
         </div>
       </div>
 
-      <div class="philosophy-pillars fade-up d2">
-        <div class="pillar">
-          <div class="pillar-num">01</div>
-          <div class="pillar-content">
-            <div class="pillar-title">TAM Expansion Underappreciation</div>
-            <div class="pillar-body">Markets linearly extrapolate existing markets. I look for when the total addressable market is fundamentally expanding — not incrementally growing.</div>
+      <div>
+        <p class="section-eyebrow" style="margin-bottom:var(--space-5);">Process</p>
+        <div style="display:flex;flex-direction:column;gap:0;border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;">
+          <div style="padding:var(--space-5) var(--space-6);border-bottom:1px solid var(--color-border);background:var(--color-surface-card);display:flex;gap:var(--space-4);">
+            <span style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;color:var(--color-accent);opacity:0.5;line-height:1;min-width:2rem;flex-shrink:0;">01</span>
+            <div>
+              <div style="font-size:var(--text-sm);font-weight:600;color:var(--color-text);margin-bottom:3px;">Extract the market-implied number</div>
+              <div style="font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.65;">Use a reverse DCF or spread decomposition to find the specific assumption the market is making. Not a narrative — a number.</div>
+            </div>
           </div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">02</div>
-          <div class="pillar-content">
-            <div class="pillar-title">Narrative Lag</div>
-            <div class="pillar-body">A 6–18 month delay exists between fundamental inflection and market narrative adjustment. Revenue acceleration, margin expansion, or product traction visible before sell-side models update.</div>
+          <div style="padding:var(--space-5) var(--space-6);border-bottom:1px solid var(--color-border);background:var(--color-surface-card);display:flex;gap:var(--space-4);">
+            <span style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;color:var(--color-accent);opacity:0.5;line-height:1;min-width:2rem;flex-shrink:0;">02</span>
+            <div>
+              <div style="font-size:var(--text-sm);font-weight:600;color:var(--color-text);margin-bottom:3px;">Find primary data that disputes it</div>
+              <div style="font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.65;">Stage-gate close rates, foot traffic data, credit metrics. Something observable that leads the consensus model.</div>
+            </div>
           </div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">03</div>
-          <div class="pillar-content">
-            <div class="pillar-title">Between Validation and Recognition</div>
-            <div class="pillar-body">I explicitly avoid pure speculation and consensus growth stories. The edge is in the middle: past the highest-risk stage, before becoming fully priced.</div>
+          <div style="padding:var(--space-5) var(--space-6);background:var(--color-surface-card);display:flex;gap:var(--space-4);">
+            <span style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;color:var(--color-accent);opacity:0.5;line-height:1;min-width:2rem;flex-shrink:0;">03</span>
+            <div>
+              <div style="font-size:var(--text-sm);font-weight:600;color:var(--color-text);margin-bottom:3px;">Build a falsifiable case</div>
+              <div style="font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.65;">State explicitly what would have to be true for the thesis to be wrong. If there is no clear answer, the thesis is not specific enough.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -246,7 +245,7 @@
 <!-- CREDENTIALS STRIP -->
 <section class="section section--alt section--bordered">
   <div class="container container--default">
-    <div class="section-header fade-up">
+    <div class="section-header">
       <div class="section-header-left">
         <p class="section-eyebrow">Background</p>
         <h2 class="section-title">Education &amp; Credentials</h2>
@@ -257,7 +256,7 @@
       </a>
     </div>
 
-    <div class="fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);">
       <div style="padding:var(--space-8);border:1px solid var(--color-border);border-radius:var(--radius-lg);background:var(--color-surface-card);">
         <div style="font-size:var(--text-xs);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:var(--space-3);">MS Finance — Applied Security Analysis</div>
         <div style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.7;">UW–Madison, Wisconsin School of Business · 2026–27. Selected program managing $20M+ in live equity and fixed income portfolios.</div>
@@ -281,7 +280,7 @@
 <!-- CTA -->
 <section class="section">
   <div class="container container--narrow" style="text-align:center;">
-    <div class="fade-up">
+    <div>
       <p class="eyebrow" style="margin-bottom:var(--space-5);">Open to Opportunities</p>
       <h2 class="section-heading" style="margin-bottom:var(--space-6);">Seeking equity research roles for summer 2026 and beyond.</h2>
       <p class="body-lead" style="margin-inline:auto;margin-bottom:var(--space-8);">Buy-side and sell-side analyst / associate roles, internships, and conversations about markets. I'm available immediately.</p>

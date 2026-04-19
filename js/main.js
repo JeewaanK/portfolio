@@ -20,15 +20,20 @@
 
 /* ─── SUBTLE FADE ON SCROLL (non-blocking) ──── */
 (function () {
-  // Only animate if user hasn't requested reduced motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const els = document.querySelectorAll('.fade-up');
   if (!els.length) return;
-  // Start hidden for JS-enabled browsers only
+  // Immediately show everything first, then apply animation to off-screen elements
   els.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight + 100) {
+      // Already visible — no animation needed
+      return;
+    }
+    // Off-screen — set up animation
     el.style.opacity = '0';
     el.style.transform = 'translateY(16px)';
-    el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   });
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -38,16 +43,9 @@
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
-  // Trigger visible elements immediately
+  }, { threshold: 0.05 });
   els.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-      el.style.opacity = '1';
-      el.style.transform = 'translateY(0)';
-    } else {
-      io.observe(el);
-    }
+    if (el.style.opacity === '0') io.observe(el);
   });
 })();
 
