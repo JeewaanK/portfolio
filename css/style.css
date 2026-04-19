@@ -80,8 +80,8 @@
 
   /* Layout */
   --content-narrow:  680px;
-  --content-default: 980px;
-  --content-wide:    1240px;
+  --content-default: 1080px;
+  --content-wide:    1440px;
 
   /* Shadows */
   --shadow-sm:   0 1px 2px rgba(0,0,0,0.05);
@@ -131,7 +131,15 @@ table { border-collapse: collapse; width: 100%; }
   width: 100%;
   max-width: var(--content-wide);
   margin-inline: auto;
-  padding-inline: clamp(var(--space-6), 5vw, var(--space-16));
+  padding-inline: clamp(var(--space-6), 4vw, var(--space-20));
+}
+
+/* Large screen — use more of the available width */
+@media (min-width: 1600px) {
+  .container       { padding-inline: clamp(var(--space-16), 6vw, var(--space-32)); }
+}
+@media (min-width: 2000px) {
+  :root { --content-wide: 1700px; --content-default: 1300px; }
 }
 .container--default { max-width: var(--content-default); }
 .container--narrow  { max-width: var(--content-narrow); }
