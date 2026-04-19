@@ -1493,3 +1493,11 @@ table { border-collapse: collapse; width: 100%; }
     gap: var(--space-4) !important;
   }
 }
+
+/* Fixed-ratio content grids (1fr 360px) → single col on tablet/mobile */
+@media (max-width: 900px) {
+  [style*="grid-template-columns:1fr 360px"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-8) !important;
+  }
+}
