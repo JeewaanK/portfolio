@@ -456,3 +456,8 @@ html { scroll-padding-top: 65px; }
   .photo-grid--portrait figure:first-child { grid-column: 1 / -1; }
   .photo-grid--portrait figure:first-child img { aspect-ratio: 4/3; }
 }
+
+/* Report pages: real top padding (style.css used an undefined --space-14,
+   which voided the rule) and Key Data panel aligned with the first heading. */
+.report-layout { padding-block: clamp(var(--space-10), 5vw, var(--space-16)); }
+.report-body .report-h2:first-of-type { margin-top: 0; }
