@@ -424,3 +424,10 @@ a.coverage-row:hover { background: var(--color-surface); }
   .marks-map { grid-template-columns: minmax(0,1fr); }
   .marks-col + .marks-col { border-left: 0; border-top: 1px solid var(--color-border); }
 }
+
+/* Jump targets (#origin, #applied, #experience, …) fill at least one screen,
+   so an in-page link lands on that section alone — same as the hero landing. */
+html { scroll-padding-top: 65px; }
+@media (min-width: 900px) {
+  main > section[id] { min-height: calc(100svh - 65px); }
+}
