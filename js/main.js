@@ -94,3 +94,26 @@ document.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click'
   const tab = document.querySelector(`.filter-tab[data-filter="${a.dataset.jump}"]`);
   if (tab) tab.click();
 }));
+
+/* ─── COPY EMAIL ────────────────────────────── */
+(function () {
+  const legacyCopy = text => {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:absolute;left:-9999px';
+    document.body.appendChild(ta); ta.select();
+    let ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+    ta.remove(); return ok;
+  };
+  document.querySelectorAll('[data-copy]').forEach(el => el.addEventListener('click', e => {
+    e.preventDefault();
+    const text = el.dataset.copy, pill = el.querySelector('[data-copy-label]');
+    const done = () => {
+      if (!pill) return;
+      pill.textContent = 'Copied ✓'; pill.classList.add('is-done');
+      setTimeout(() => { pill.textContent = 'Copy'; pill.classList.remove('is-done'); }, 2000);
+    };
+    const fallback = () => legacyCopy(text) ? done() : (window.location.href = el.getAttribute('href'));
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(done, fallback);
+    else fallback();
+  }));
+})();

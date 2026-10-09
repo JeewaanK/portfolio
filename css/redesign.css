@@ -461,3 +461,27 @@ html { scroll-padding-top: 65px; }
    which voided the rule) and Key Data panel aligned with the first heading. */
 .report-layout { padding-block: clamp(var(--space-10), 5vw, var(--space-16)); }
 .report-body .report-h2:first-of-type { margin-top: 0; }
+
+/* Action pills — one style for every "do something" affordance (no arrows) */
+.action-pill {
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; white-space: nowrap;
+  padding: 5px 12px; border: 1px solid var(--color-border); border-radius: var(--radius-full);
+  font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--color-text-muted); background: transparent;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+.action-pill--sm { padding: 3px 10px; font-size: 0.65rem; }
+a.action-pill:hover,
+a.research-card:hover .action-pill,
+a.contact-link-item:hover .action-pill { color: var(--color-accent); border-color: var(--color-accent); }
+.action-pill.is-done { color: var(--color-buy); border-color: var(--color-buy); background: var(--color-buy-bg); }
+.card-cta-group { gap: var(--space-2); }
+.info-card-links { gap: var(--space-2); }
+.contact-link-item .action-pill { margin-left: auto; }
+.action-pill { border-color: color-mix(in srgb, var(--color-text-muted) 45%, transparent); color: var(--color-text); }
+.contact-link-item { min-width: 0; }
+.contact-link-text { flex: 1; min-width: 0; }
+.contact-link-value { overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  .contact-link-item .action-pill { padding: 3px 9px; font-size: 0.62rem; letter-spacing: 0.04em; }
+}
